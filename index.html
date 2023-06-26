@@ -1,29 +1,140 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Space Joe | Home</title>
-
+    <title>Space Joe | Chat</title>
     <link rel="stylesheet" href="_models/notifications/notifications.css">
     <script src="/_models/notifications/notifications.js"></script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f2f2f2;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
 
+        .chat-container {
+            max-width: 100%;
+            background-color: #fff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .chat-header {
+            background-color: #FF9433;
+            color: #fff;
+            padding: 15px;
+        }
+
+        .chat-header h2 {
+            margin: 0;
+            font-size: 18px;
+        }
+
+        .chat-messages {
+            padding: 15px;
+            height: 71vh;
+        }
+
+        .message {
+            margin-bottom: 15px;
+        }
+
+        .message .sender {
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+
+        .message .content {
+            background-color: #FFEAD8;
+            color: #FF9433;
+            padding: 10px;
+            border-radius: 10px;
+            display: inline-block;
+        }
+
+        .message .time {
+            font-size: 12px;
+            color: #888;
+        }
+
+        .message.sent {
+            text-align: right;
+        }
+
+        .message.sent .content {
+            background-color: #FF9433;
+            color: white;
+        }
+
+        .message.received .content {
+            background-color: #FFEAD8;
+        }
+
+        .input-container {
+            background-color: #f2f2f2;
+            padding: 15px;
+            
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .input-container input {
+            width: 100%;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+        }
+
+        .input-container button {
+            background-color: #FF9433;
+            color: #fff;
+            border: none;
+            padding: 10px 15px;
+            margin-left: 10px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+    </style>
 </head>
 <body>
-    
-    <header></header>
-
-    <body></body>
-
-    <footer></footer>
-
-    <script>
-
-        // let notifications = new Notifications();
-        // notifications.show("Meu componente deu certo!");
-
-    </script>
-
+    <div class="chat-container">
+        <div class="chat-header">
+            <h2>Space Joe</h2>
+        </div>
+        <div class="chat-messages">
+            <div class="message sent">
+                <div class="sender">Eu</div>
+                <div class="content">Olá! Gostaria de saber qual o melhor café que tem?</div>
+                <div class="time">11:32</div>
+            </div>
+            <div class="message received">
+                <div class="sender">Space Joe</div>
+                <div class="content">Ué?! Você não conhece? É o Café Socorro com certeza!</div>
+                <div class="time">11:30</div>
+            </div>
+            <!-- Adicione mais mensagens aqui -->
+        </div>
+        <div class="input-container">
+            <input  type="text" placeholder="Digite sua mensagem...">
+            <button onclick="sendMessage()">Enviar</button>
+        </div>
+    </div>
 </body>
+<script>
+
+    var der = "errado";
+
+    function sendMessage () {
+
+        if (der == "errado") {
+
+            // Ao invés de mostrarmos um alert, mostraremos uma notificação.
+            alert("Deu erro");
+
+        }
+        
+    }
+
+</script>
 </html>
